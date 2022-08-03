@@ -1,0 +1,13 @@
+@use '../../styles/mixins'
+
+.container-said
+    @include mixins.container-outputs
+
+    .cont-said
+        width: 100%
+        @include mixins.flex-center
+        justify-content: space-evenly
+        
+        p
+            margin-right: 5px
+            font-size: 20px

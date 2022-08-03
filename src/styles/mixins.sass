@@ -1,0 +1,21 @@
+@mixin flex-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+@mixin container-outputs   
+    display: flex
+    align-items: center
+    justify-content: space-around
+    flex-direction: column
+
+    box-shadow: 1px 1px 8px gray
+    border-radius: 6px
+    padding: 10px
+    width: 250px
+    height: 100px
+    user-select: none
+    transition: transform 0.3s
+
+    &:hover
+        transform: scale(1.1)
