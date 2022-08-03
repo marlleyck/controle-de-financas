@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.sass';
 
 function App() {
   return (
     <div className="App">
-      <h1>REact + Sass</h1>
+      <h1 className='titulo'>REact + Sass</h1>
     </div>
   );
 }
