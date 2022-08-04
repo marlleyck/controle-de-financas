@@ -1,0 +1,23 @@
+@use '../../styles/mixins'
+
+.button-cont
+    @include mixins.flex-center
+    width: 100%
+    height: 100%
+
+.botao
+    border: none
+    outline: none
+    padding: 15px
+    background-color: #0F81C0
+    color: white
+    border-radius: 10px
+    text-transform: uppercase
+
+    user-select: none
+    cursor: pointer
+    transition: all .3s
+    
+
+    &:hover
+        background-color: #0c5881

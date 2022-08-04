@@ -6,6 +6,8 @@ import Total from './outputs/Total';
 import Descricao from './adds/Descricao';
 import Valor from './adds/Valor';
 import Show from './shows/Show';
+import Opcoes from './adds/Opcoes';
+import Button from './adds/Button';
 
 import './Main.sass'
 
@@ -26,7 +28,9 @@ const Main = () => {
 
                 <Valor />
 
-                
+                <Opcoes />
+
+                <Button />
             </div>
 
             <div className='shows'>
