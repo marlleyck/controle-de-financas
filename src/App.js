@@ -1,4 +1,5 @@
 import React from 'react';
+import AuthProvider from './contexts/auth';
 
 import Header from './components/Header';
 import Main from './components/Main';
@@ -8,11 +9,13 @@ import './App.sass';
 function App() {
   return (
     <div className="App">
-      <Header />
-
-      <Main />
-
+      <AuthProvider>
       
+        <Header />
+
+        <Main />
+      
+    </AuthProvider>
     </div>
   );
 }

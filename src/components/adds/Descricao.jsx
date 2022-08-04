@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../../contexts/auth';
 
 import './Descricao.sass'
 
 const Descricao = () => {
 
-    const [descrip, setDescrip] = useState('')
+    const {descrip, setDescrip} = useContext(AuthContext)
 
     const handleDescrip = (e) => {
         setDescrip(e.target.value)
-        console.log(descrip)
     }
 
     return ( 

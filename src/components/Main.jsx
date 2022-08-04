@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Entrada from './outputs/Entrada';
 import Saida from './outputs/Saida';
@@ -12,6 +12,7 @@ import Button from './adds/Button';
 import './Main.sass'
 
 const Main = () => {
+
     return ( 
         <main className='main'>
 
