@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import { AuthContext } from '../../contexts/auth';
 
 import {FaTrash} from 'react-icons/fa'
-import {BsArrowUpCircle} from 'react-icons/bs'
 
 import './Show.sass'
 
@@ -15,6 +14,7 @@ const Show = () => {
         setFinanc(newFinanc)
     }
 
+
     return ( 
         <div className='cont-show'>
             <header>
@@ -22,6 +22,7 @@ const Show = () => {
                 <p>Valor</p>
                 <p>Ação</p>
             </header>
+
 
             <div className="body">
                 {financ.map((item) => (

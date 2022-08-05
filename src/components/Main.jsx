@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../contexts/auth';
 
 import Entrada from './outputs/Entrada';
 import Saida from './outputs/Saida';
@@ -12,6 +13,9 @@ import Button from './adds/Button';
 import './Main.sass'
 
 const Main = () => {
+
+    const {getLocal, setLocal} = useContext(AuthContext)
+
 
     return ( 
         <main className='main'>
@@ -31,11 +35,15 @@ const Main = () => {
 
                 <Opcoes />
 
-                <Button />
+                <Button
+                getLocal={getLocal}
+                setLocal={setLocal} />
             </div>
 
             <div className='shows'>
-                <Show />
+                <Show 
+                getLocal={getLocal}
+                setLocal={setLocal} />
             </div>
         </main>
      );

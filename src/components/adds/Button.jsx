@@ -1,11 +1,11 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import { AuthContext } from '../../contexts/auth';
 
 import './Button.sass'
 
-const Button = () => {
+const Button = ({setLocal}) => {
 
-    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc, setInpDescrip, setInputValor, setVaria}
+    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc, setInpDescrip, setInputValor}
     = useContext(AuthContext)
 
     const handleClick = () => {
@@ -39,6 +39,13 @@ const Button = () => {
         setInpDescrip('')
         setInputValor('')
     }
+    
+    useEffect(() => {
+        if (financ[0] !== undefined) {
+            setLocal(financ)
+        }
+        
+    }, [financ])
 
     return ( 
         <div className="button-cont">

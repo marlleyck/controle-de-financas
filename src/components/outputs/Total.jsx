@@ -7,8 +7,7 @@ import './Total.sass'
 
 const Total = () => {
 
-    const {inpValor, setInpValor, total} = useContext(AuthContext)
-
+    const {inpValor, setInpValor, total, financ} = useContext(AuthContext)
 
     return ( 
         <div className='container-tot'>
