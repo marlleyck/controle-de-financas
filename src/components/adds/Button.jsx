@@ -5,10 +5,17 @@ import './Button.sass'
 
 const Button = () => {
 
-    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida}
+    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc}
     = useContext(AuthContext)
 
     const handleClick = () => {
+        setFinanc([...financ, 
+            {
+                descricao: descrip, 
+                mony: inpValor
+            }
+        ])
+
         if (selecao === 'entrada') {
             let soma = Number(total) + Number(inpValor)
             setTotal(soma)

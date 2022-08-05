@@ -18,20 +18,23 @@ const Show = () => {
                 <p>Ação</p>
             </header>
 
-            {financ.map((item) => (
-                <div className="body">
-                    <div className="desc-div">
-                        <p className='desc-value'>Salário</p>
+            <div className="body">
+                {financ.map((item) => (
+                    <div className="cont-body">
+                        <div className="desc-div">
+                            <p className='desc-value'>{item.descricao}</p>
+                        </div>
+                
+                        <div className="value-div">
+                            <p className='valor-value'>{item.mony}</p>
+                        </div>
+                        <div className="icon-div">
+                            <FaTrash className='icon-div-lixeira' />
+                        </div>
                     </div>
-                    
-                    <div className="value-div">
-                        <p className='valor-value'>1500</p>
-                    </div>
-                    <div className="icon-div">
-                        <FaTrash className='icon-div-lixeira' />
-                    </div>
-                </div>
-            ))}
+                ))}
+            </div>
+
         </div>
      );
 }
