@@ -5,26 +5,36 @@ import './Button.sass'
 
 const Button = () => {
 
-    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc, setInpDescrip, setInputValor}
+    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc, setInpDescrip, setInputValor, setVaria}
     = useContext(AuthContext)
 
     const handleClick = () => {
-        setFinanc([...financ, 
-            {
-                id: financ.length+1,
-                descricao: descrip, 
-                mony: inpValor
-            }
-        ])
-
         if (selecao === 'entrada') {
             let soma = Number(total) + Number(inpValor)
             setTotal(soma)
             setEntrada(inpValor)
+
+            setFinanc([...financ, 
+                {
+                    id: financ.length+1,
+                    descricao: descrip, 
+                    mony: inpValor,
+                    status: 'entrada'
+                }
+            ])
         } else if (selecao === 'saida') {
             let dif = Number(total) - Number(inpValor)
             setTotal(dif)
             setSaida(inpValor)
+
+            setFinanc([...financ, 
+                {
+                    id: financ.length+1,
+                    descricao: descrip, 
+                    mony: inpValor,
+                    status: 'saida'
+                }
+            ])
         } 
         setInpDescrip('')
         setInputValor('')

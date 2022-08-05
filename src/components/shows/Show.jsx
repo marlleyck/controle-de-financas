@@ -25,11 +25,21 @@ const Show = () => {
 
             <div className="body">
                 {financ.map((item) => (
-                    <div className="cont-body">
+                    <div className="cont-body" key={item.id}>
+                    {item.status === 'entrada' && (
                         <div className="desc-div">
-                            <p className='desc-value'>{item.descricao}</p>
+                            <p className='desc-value' style={{color: 'green'}}>
+                                {item.descricao}
+                            </p>
                         </div>
-                
+                    )}
+                    {item.status === 'saida' && (
+                        <div className="desc-div">
+                            <p className='desc-value' style={{color: 'red'}}>
+                                {item.descricao}
+                            </p>
+                        </div>
+                    )}
                         <div className="value-div">
                             <p className='valor-value'>{item.mony}</p>
                         </div>
@@ -40,7 +50,6 @@ const Show = () => {
                     </div>
                 ))}
             </div>
-
         </div>
      );
 }

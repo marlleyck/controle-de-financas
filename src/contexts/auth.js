@@ -20,7 +20,6 @@ function AuthProvider({children}) {
     const [inpDescrip, setInpDescrip] = useState('')
     const [inputValor, setInputValor] = useState('')
 
-
     const [financ, setFinanc] = useState([])
 
     return (
@@ -28,8 +27,7 @@ function AuthProvider({children}) {
                                     {descrip, setDescrip, inpValor, setInpValor, 
                                     selecao, setSelecao, total, setTotal, 
                                     entrada, setEntrada, saida, setSaida, financ, setFinanc,
-                                    inpDescrip, setInpDescrip,
-                                    inputValor, setInputValor}}>
+                                    inpDescrip, setInpDescrip, inputValor, setInputValor}}>
             {children}
         </AuthContext.Provider>
     )
