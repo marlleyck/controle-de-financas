@@ -10,6 +10,11 @@ const Show = () => {
 
     const {financ, setFinanc} = useContext(AuthContext)
 
+    const handleClickTrash = (id) => {
+        const newFinanc = financ.filter((item) => item.id !== id)
+        setFinanc(newFinanc)
+    }
+
     return ( 
         <div className='cont-show'>
             <header>
@@ -29,7 +34,8 @@ const Show = () => {
                             <p className='valor-value'>{item.mony}</p>
                         </div>
                         <div className="icon-div">
-                            <FaTrash className='icon-div-lixeira' />
+                            <FaTrash className='icon-div-lixeira'
+                            onClick={() => handleClickTrash(item.id)} />
                         </div>
                     </div>
                 ))}

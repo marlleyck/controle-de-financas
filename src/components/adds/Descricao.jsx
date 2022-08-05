@@ -5,10 +5,11 @@ import './Descricao.sass'
 
 const Descricao = () => {
 
-    const {descrip, setDescrip} = useContext(AuthContext)
+    const {inpDescrip, setInpDescrip, setDescrip, inputValor, setInputValor} = useContext(AuthContext)
 
     const handleDescrip = (e) => {
         setDescrip(e.target.value)
+        setInpDescrip(e.target.value)
     }
 
     return ( 
@@ -16,7 +17,7 @@ const Descricao = () => {
             <label htmlFor="desc">Descrição</label>
             <input type="text"
             onChange={handleDescrip}
-            value={descrip} />
+            value={inpDescrip} />
         </div>
      );
 }

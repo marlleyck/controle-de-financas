@@ -17,6 +17,9 @@ function AuthProvider({children}) {
 
     const [saida, setSaida] = useState(0)
 
+    const [inpDescrip, setInpDescrip] = useState('')
+    const [inputValor, setInputValor] = useState('')
+
 
     const [financ, setFinanc] = useState([])
 
@@ -24,7 +27,9 @@ function AuthProvider({children}) {
         <AuthContext.Provider value={
                                     {descrip, setDescrip, inpValor, setInpValor, 
                                     selecao, setSelecao, total, setTotal, 
-                                    entrada, setEntrada, saida, setSaida, financ, setFinanc}}>
+                                    entrada, setEntrada, saida, setSaida, financ, setFinanc,
+                                    inpDescrip, setInpDescrip,
+                                    inputValor, setInputValor}}>
             {children}
         </AuthContext.Provider>
     )

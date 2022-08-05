@@ -5,12 +5,13 @@ import './Button.sass'
 
 const Button = () => {
 
-    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc}
+    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc, setInpDescrip, setInputValor}
     = useContext(AuthContext)
 
     const handleClick = () => {
         setFinanc([...financ, 
             {
+                id: financ.length+1,
                 descricao: descrip, 
                 mony: inpValor
             }
@@ -25,6 +26,8 @@ const Button = () => {
             setTotal(dif)
             setSaida(inpValor)
         } 
+        setInpDescrip('')
+        setInputValor('')
     }
 
     return ( 

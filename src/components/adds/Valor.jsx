@@ -5,10 +5,11 @@ import './Valor.sass'
 
 const Valor = () => {
 
-    const {inpValor, setInpValor} = useContext(AuthContext)
+    const {inpValor, setInpValor, inputValor, setInputValor} = useContext(AuthContext)
 
     const handleInpValor = (e) => {
         setInpValor(e.target.value)
+        setInputValor(e.target.value)
     }
 
     return ( 
@@ -16,7 +17,7 @@ const Valor = () => {
             <label htmlFor="val">Valor</label>
             <input type="number"
             onChange={handleInpValor}
-            value={inpValor} />
+            value={inputValor} />
         </div>
      );
 }

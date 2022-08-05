@@ -20,8 +20,8 @@ header
 
 .body
     overflow-y: scroll 
-    @include mixins.flex-center
-    justify-content: space-around
+    display: flex
+    justify-content: flex-start
     flex-direction: column
     width: 100%
     height: 190px
@@ -39,6 +39,9 @@ header
         @include mixins.flex-center
         word-break: break-all
         text-align: center
+
+        .desc-value
+            text-transform: capitalize
         
     .value-div
         width: 100px
