@@ -17,7 +17,7 @@ const Descricao = () => {
             <label htmlFor="desc">Descrição</label>
             <input type="text"
             onChange={handleDescrip}
-            value={inpDescrip} />
+            value={inpDescrip} required />
         </div>
      );
 }

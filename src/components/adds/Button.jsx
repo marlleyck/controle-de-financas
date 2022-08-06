@@ -35,16 +35,17 @@ const Button = ({setLocal}) => {
                     status: 'saida'
                 }
             ])
+        } else {
+            alert('Preencha todas as informações!')
         } 
         setInpDescrip('')
         setInputValor('')
     }
     
     useEffect(() => {
-        if (financ[0] !== undefined) {
-            setLocal(financ)
-        }
-        
+        setLocal(financ)
+
+
     }, [financ])
 
     return ( 

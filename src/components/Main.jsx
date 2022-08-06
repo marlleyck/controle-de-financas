@@ -14,7 +14,7 @@ import './Main.sass'
 
 const Main = () => {
 
-    const {getLocal, setLocal} = useContext(AuthContext)
+    const {setLocal} = useContext(AuthContext)
 
 
     return ( 
@@ -36,14 +36,11 @@ const Main = () => {
                 <Opcoes />
 
                 <Button
-                getLocal={getLocal}
                 setLocal={setLocal} />
             </div>
 
             <div className='shows'>
-                <Show 
-                getLocal={getLocal}
-                setLocal={setLocal} />
+                <Show />
             </div>
         </main>
      );

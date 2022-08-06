@@ -17,7 +17,7 @@ const Valor = () => {
             <label htmlFor="val">Valor</label>
             <input type="number"
             onChange={handleInpValor}
-            value={inputValor} />
+            value={inputValor} required />
         </div>
      );
 }
