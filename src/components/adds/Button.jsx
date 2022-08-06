@@ -5,10 +5,13 @@ import './Button.sass'
 
 const Button = ({setLocal}) => {
 
-    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc, setInpDescrip, setInputValor}
+    const {descrip, inpValor, selecao, total, setTotal, setEntrada, setSaida, financ, setFinanc, setInpDescrip, setInputValor, inpDescrip}
     = useContext(AuthContext)
 
     const handleClick = () => {
+    if (descrip === '' || inpValor === '' || inpDescrip === '') {
+        alert('Preencha todos os campos!')
+    } else {
         if (selecao === 'entrada') {
             let soma = Number(total) + Number(inpValor)
             setTotal(soma)
@@ -40,6 +43,8 @@ const Button = ({setLocal}) => {
         } 
         setInpDescrip('')
         setInputValor('')
+    }   
+        
     }
     
     useEffect(() => {

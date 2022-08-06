@@ -7,7 +7,7 @@ import './Show.sass'
 
 const Show = () => {
 
-    const {financ, setFinanc, setLocal, list} = useContext(AuthContext)
+    const {financ, setFinanc} = useContext(AuthContext)
 
     const handleClickTrash = (id) => {
         const newFinanc = financ.filter((item) => item.id !== id)
