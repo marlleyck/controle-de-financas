@@ -20,12 +20,20 @@ const Total = () => {
         const saida = amountOut.reduce((acc, cur) => acc + cur,0).toFixed(2);
         const entrada = amountIn.reduce((acc, cur) => acc + cur,0).toFixed(2);
 
-        const tot = entrada != 0 ? (Number(entrada) - Number(saida)).toFixed(2) : Number(entrada)
-        
+        if (entrada != 0) {
+            const tot = (Number(entrada) - Number(saida)).toFixed(2)
+            setTotal(tot)
+        } else if (saida > 0 && entrada == 0) {
+            const tot = (Number(entrada) - Number(saida)).toFixed(2)
+            setTotal(tot)
+        } else {
+            const tot = Number(entrada)
+            setTotal(tot)
+        }
+       
         setEntrada(entrada)
         setSaida(saida)
-        setTotal(tot)
-
+        
     }, [financ])
 
     return ( 
